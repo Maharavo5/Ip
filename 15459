@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fiche</title>
+    <style type="text/css">
+        body{
+
+            background-color:black;
+        }
+
+        .debut{
+            color: rgb(237, 63, 135);
+            font-size: larger;
+            font-style: oblique;
+        }
+
+        .formulaire
+        {   
+            font-size: 50px;
+            font-style: italic;
+            font-weight: 300;
+            width: 60%;
+            height: auto;
+            border: 2px solid;
+            padding: 50px;
+            margin:100px 250px 250px 250px  ;
+            text-shadow: 100px chocolate;
+            border-radius: 15px 15px 15px 15px ;
+            border-color: brown;
+            background-color: crimson;
+        }
+        p{
+        
+            padding: 0px 100px 0 600px ;
+            
+            font-size: 50px;
+        }
+
+        input{
+            font-size: 40px;
+            border-color: blueviolet;
+            background-color: rgba(224, 65, 144, 0.301);
+        }
+        
+    </style>    
+</head>
+<body>
+   <div class="debut"> <center>entrer votre adresse</center></div><br>
+        <div class="formulaire">
+            <FORM ACTION="id.cgi" method="get"> 
+                    adresse:<input type="text" name="adresse" /><br>
+                    <p><input type="submit" value="envoyer"/></p>
+            </FORM>    
+        </div>      
+</body>
+</html>

@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+typedef struct nombre
+{
+    int one;
+    int two;
+    int three;
+    int four;
+}nombre;
+
+char enter();
+void test (nombre nbr);
+
+int main()
+{
+    char *get=getenv("QUERY_STRING");
+    nombre nbr;
+    //char un[4],deux[4],trois[4],quatre[4];
+    printf("content-type:text/html\n\n");
+    sscanf(get,"adresse=%d.%d.%d.%d",/*un,deux,trois,quatre*/&nbr.one,&nbr.two,&nbr.three,&nbr.four);
+
+   /* nbr.one=atoi(un);
+    nbr.two=atoi(deux);
+    nbr.three=atoi(trois);
+    nbr.four=atoi(quatre);*/
+   // printf("%d,%d,%d,%d",nbr.one,nbr.two,nbr.three,nbr.four);
+  
+    printf("<HTML>\n");
+    printf("    <HEAD>\n");
+    printf("        <TITLE>\n");
+    printf("            adresse\n");
+    printf("        </TITLE>\n");
+    printf("    </HEAD>\n");
+    printf("    <BODY  style'background-color:black'>\n");
+    printf("<center>");
+    test(nbr);
+    printf("</center>");
+    printf("    </BODY>\n");
+    printf("</HTML>");
+ 
+    return 0;
+}
+
+
+void test (nombre nbr)
+{
+     if(nbr.one>255||nbr.two>255||nbr.three>255||nbr.four>255)
+    {
+        printf("\n<div style='border:solid ; width:500px ; height:auto;padding:20px 20px 20px 20px ;margin:100px 100px 0 0; background-color: crimson'>ce n'est pas un adresse IP</div>");
+    }
+
+    else
+    {
+        if(nbr.one<128)
+        {
+            printf("\n<p> c'est de type A</p>");
+        }
+
+        else if(nbr.one>=128||nbr.one<191)
+        {
+            printf("\n <p>c'est de type B</p>");
+        }
+        else if(nbr.one>=191||nbr.one<224)
+        {
+            printf("\n <p>c'est de type C</p>");
+        }
+
+        else if(nbr.one>=224||nbr.one<240)
+        {
+            printf("\n<p> c'est de type D</p>");
+        }
+        else{
+            printf("\n <p>c'est de type E</p>");
+        }
+    }
+}
