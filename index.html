@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fiche</title>
+    <style type="text/css">
+        body{
+
+            background-color:black;
+        }
+
+       
+
+        .formulaire
+        {   
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 300;
+            width: 60%;
+            height: auto;
+            border: 2px solid;
+            padding: 0px 50px 0px 0px;
+            margin:100px 250px 250px 250px  ;
+            text-shadow: 100px chocolate;
+            border-radius: 15px 15px 15px 15px ;
+             border-color: brown ;
+           background-color: crimson ;  
+        }
+        p{
+        
+            padding: 0px 100px 0 50px ;
+            border-radius: 0px 0px 0px 0px;
+            border-color: blueviolet;
+            font-size: 50px;
+        }
+
+        input.enter{
+            font-size: 40px;
+            border-color: blueviolet;
+            background-color: rgba(224, 65, 144, 0.301);
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        input.sorti{
+            font-size: medium;
+            border-color: palevioletred;
+            background-color: rgba(237, 104, 130, 0.541);
+        }
+        a{
+            font-size: medium;
+            border-color: palevioletred;
+            background-color: rgba(237, 104, 130, 0.541);
+        }
+      
+
+       
+        .debut{
+            animation-name: animation;
+            animation-duration: 3s;
+            animation-fill-mode: both;
+            width: 82%;
+            font-style: oblique;
+            background-color: rgb(234, 159, 209);
+            color:fuchsia;
+            padding: 50px 0% 50px 200px;
+            margin:0px 0px 30px 0px;
+            border-radius: 15px 15px 15px 15px;
+            border: 1px;
+            border-color: black;
+
+        }
+        
+    </style>    
+</head>
+<body>
+    <div class="formulaire">
+        <div class="debut" >
+            LOGIN
+        </div>
+        <form action="adresse.cgi" method="get">
+            login:<input class="enter" type="text" name="login" /><br>
+            password:<input class="enter" type="password" name="mdp" /><br>
+            <center><a href="login.cgi">creer un nouvau compte</a></center><br>
+            <center><p><input class="sorti" type="submit" value="connected"/></p></center>
+        </form>
+    </div>      
+</body>   
